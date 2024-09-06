@@ -1,16 +1,20 @@
-# This is a sample Python script.
+class alumno:
+    def __init__(self, calificacion):
+        self.calificacion = calificacion
 
-# Press Mayús+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+    def evaluar_calificacion(self):
+        if self.calificacion > 9.0:
+            return "La calificación es A."
+        elif self.calificacion > 8.0:
+            return "La calificación es B."
+        elif self.calificacion >= 7.5:
+            return "La calificación es C."
+        else:
+            return "La calificación es R."
+
+calificacion = float(input("Ingrese la calificación: "))
+Alumno = alumno(calificacion)
+
+print(Alumno.evaluar_calificacion())
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
